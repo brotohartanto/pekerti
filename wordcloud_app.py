@@ -47,7 +47,7 @@ if submit_button and user_input:
 all_text = get_all_text()
 
 if all_text.strip():
-    st.header("Hasil Word Cloud")
+    #st.header("Kelas hari ini")
     try:
         # Membuat dan menampilkan word cloud
         wordcloud = WordCloud(

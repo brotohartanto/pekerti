@@ -87,7 +87,6 @@ st.markdown(" ")
 st.markdown(f"""
     <center>
       dibuat sambil ☕️ oleh broto <br>
-      <b>januari 2025<b> <br>
-      <span style="font-size: 0.75em;">Google & Semanticscholar.org</span> <br>
+      <br>
     </center>
     """, unsafe_allow_html=True)

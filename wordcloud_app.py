@@ -78,6 +78,12 @@ if all_text.strip():
 else:
     st.info("Belum ada kata yang dimasukkan. Jadilah yang pertama!")
 
+# --- Menampilkan Teks Mentah (Opsional) ---
+with st.expander("Lihat semua teks yang sudah dimasukkan"):
+    st.text_area("", value=all_text, height=200, disabled=True)
+
+st.markdown(" ")
+st.markdown(" ")
 st.markdown(f"""
     <center>
       dibuat sambil ☕️ oleh broto <br>
@@ -85,7 +91,3 @@ st.markdown(f"""
       <span style="font-size: 0.75em;">Google & Semanticscholar.org</span> <br>
     </center>
     """, unsafe_allow_html=True)
-
-# --- Menampilkan Teks Mentah (Opsional) ---
-with st.expander("Lihat semua teks yang sudah dimasukkan"):
-    st.text_area("", value=all_text, height=200, disabled=True)

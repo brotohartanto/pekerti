@@ -28,7 +28,7 @@ def get_all_text():
         return f.read()
 
 # --- Tampilan Utama Aplikasi ---
-st.title("☁️ PEKERTI UNY")
+st.title("☁️ PEKERTI UNY 2025 - Kelompok 1")
 st.write(
     "Simpulkan pembelajaran kita saat ini. Buat kalimat pendek yang anda ingat..."
 )
@@ -77,6 +77,14 @@ if all_text.strip():
 
 else:
     st.info("Belum ada kata yang dimasukkan. Jadilah yang pertama!")
+
+st.markdown(f"""
+    <center>
+      dibuat sambil ☕️ oleh broto <br>
+      <b>januari 2025<b> <br>
+      <span style="font-size: 0.75em;">Google & Semanticscholar.org</span> <br>
+    </center>
+    """, unsafe_allow_html=True)
 
 # --- Menampilkan Teks Mentah (Opsional) ---
 with st.expander("Lihat semua teks yang sudah dimasukkan"):

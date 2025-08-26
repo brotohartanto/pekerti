@@ -77,12 +77,12 @@ with st.expander("Lihat semua teks yang sudah dimasukkan"):
 
 st.markdown(" ")
 st.markdown(" ")
-st.markdown(f"""
+st.markdown("""
     <center>
       dibuat sambil ☕️ oleh broto <br>
       <br>
     </center>
-    """)
+    """, unsafe_allow_html=True)
 
-time.sleep(3)
+time.sleep(10)
 st.rerun()

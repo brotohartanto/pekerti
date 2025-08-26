@@ -2,6 +2,7 @@ import streamlit as st
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import os
+from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 
 st.set_page_config(
     page_title="Live Word Cloud",
@@ -11,6 +12,7 @@ st.set_page_config(
 )
 
 WORDS_FILE = "submitted_words.txt"
+
 def add_words(text):
     with open(WORDS_FILE, "a", encoding="utf-8") as f:
         f.write(text + "\n")
@@ -39,6 +41,9 @@ if all_text.strip():
     #st.header("Kelas hari ini")
     try:
         # Membuat dan menampilkan word cloud
+        factory = StopWordRemoverFactory()
+        stopwords = factory.get_stop_words()
+        
         wordcloud = WordCloud(
             width=800,
             height=400,
@@ -47,6 +52,7 @@ if all_text.strip():
             contour_width=1,
             contour_color="steelblue",
             min_font_size=10,
+            stopwords=stopwords,
         ).generate(all_text)
 
         fig, ax = plt.subplots()

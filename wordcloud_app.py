@@ -28,7 +28,7 @@ def get_all_text():
         return f.read()
 
 # --- Tampilan Utama Aplikasi ---
-st.title("☁️ PEKERTI UNY 2025 - Kelompok 1")
+st.title("☁️ Simpulan")
 st.write(
     "Simpulkan pembelajaran kita saat ini. Buat kalimat pendek yang anda ingat..."
 )

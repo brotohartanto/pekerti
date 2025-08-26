@@ -3,6 +3,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import os
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+import time
 
 st.set_page_config(
     page_title="Live Word Cloud",
@@ -81,4 +82,7 @@ st.markdown(f"""
       dibuat sambil ☕️ oleh broto <br>
       <br>
     </center>
-    """, unsafe_allow_html=True)
+    """)
+
+time.sleep(3)
+st.rerun()
